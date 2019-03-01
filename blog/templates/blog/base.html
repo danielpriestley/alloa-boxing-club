@@ -1,0 +1,188 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Alloa Boxing Club are an independent boxing club based in Alloa, Scotland. They offer training and classes to all ages from children to adults, in addition to women only classes. They also offer memberships to their gym and circuit classes.">
+
+    <title>ALLOA BOXING CLUB | Scotland's Premier Boxing Experience</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="dark-nav">
+    <nav id="menu" class="mobile-menu">
+        <div class="mobile-menu-container">
+            <div class="mobile-nav">
+                <h1>The Club</h1>
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item"><a href="about" class="mobile-nav-link">About</a></li>
+                    <li class="mobile-nav-item"><a href="classes" class="mobile-nav-link">Classes</a></li>
+                    <li class="mobile-nav-item"><a href="fighters" class="mobile-nav-link">Fighters</a></li>
+                    <li class="mobile-nav-item"><a href="sponsor" class="mobile-nav-link">Sponsor Us</a></li>
+                    <li class="mobile-nav-item"><a href="news" class="mobile-nav-link">News</a></li>
+                    <li class="mobile-nav-item"><a href="contact" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-social">
+                <h1>Social</h1>
+                <ul class="mobile-social-list">
+                    <li class="mobile-social-item"><a href="https://www.facebook.com/alloaboxing.club" class="mobile-social-link">Facebook</a></li>
+                    <li class="mobile-social-item"><a href="https://www.twitter.com/alloaboxingclub" class="mobile-social-link">Twitter</a></li>
+                    <li class="mobile-social-item"><a href="https://www.instagram.com/alloaboxingclub" class="mobile-social-link">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This is the code for the header menu -->
+    <div class="header-bg"></div>
+    <div class="header-wrapper">
+        <nav class="header">
+
+            <!-- Left Navigation Items -->
+            <div class="header-left">
+                <!-- Hamburger Menu -->
+                <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" autocomplete="off">
+                <label for="openSidebarMenu" class="sidebarIconToggle" id="sidebarIconToggle" onclick="slideout.toggle()">
+                    <div class="spinner diagonal part-1"></div>
+                    <div class="spinner horizontal"></div>
+                    <div class="spinner diagonal part-2"></div>
+                </label>
+
+                <ul class="left-nav" id="left-nav">
+                    <li class="left-nav-item"><a href="/contact" class="left-nav-link">Contact</a></li>
+                    <li class="left-nav-item"><a href="/fighters" class="left-nav-link">Fighters</a></li>
+                    <li class="left-nav-item"><a href="/classes" class="left-nav-link">Classes</a></li>
+                </ul>
+            </div>
+
+            <!-- Central Logo -->
+            <div class="header-logo">
+                <a href="/index" class="header-logo-link"><img src="{% static 'img/header-logodarktext.svg' %}" alt="alloa boxing club logo crest"></a>
+            </div>
+
+            <!-- Right Navigation Items -->
+            <div class="right-nav">
+                <a href="https://www.facebook.com/alloaboxin.club" class="right-nav-link"><img src="{% static 'img/facebook-logo-dark.svg' %}"></a>
+                <a href="https://www.twitter.com/alloaboxingclub" class="right-nav-link"><img src="{% static 'img/twitter-logo-dark.svg' %}"></a>
+                <a href="https://www.instagram.com/alloaboxingclub" class="right-nav-link"><img src="{% static 'img/instagram-logo-dark.svg' %}"></a>
+            </div>
+        </nav>
+    </div>
+
+    <main id="panel">
+        <div class="center">
+            <div class="wrapper">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul class="club">
+                    <h1 class="footer-header">the Club</h1>
+                    <li class="footer-item"><a href="about" class="footer-link">About Us</a></li>
+                    <li class="footer-item"><a href="classes" class="footer-link">Classes</a></li>
+                    <li class="footer-item"><a href="fighters" class="footer-link">Fighters</a></li>
+                    <li class="footer-item"><a href="news" class="footer-link">News</a></li>
+                </ul>
+                <ul class="services">
+                    <h1 class="footer-header">Services</h1>
+                    <li class="footer-item"><a href="sponsors" class="footer-link">Sponsor Packages</a></li>
+                    <li class="footer-item"><a href="classes" class="footer-link">Personal Training</a></li>
+                    <li class="footer-item"><a href="contact" class="footer-link">Gym Memberships</a></li>
+                </ul>
+                <ul class="social">
+                    <h1 class="footer-header">Social</h1>
+                    <li class="footer-item">
+                        <a href="https://www.facebook.com/alloaboxin.club" class="footer-link">Facebook</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="https://www.twitter.com/alloaboxingclub" class="footer-link">Twitter</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="https://www.instagram.com/alloaboxingclub" class="footer-link">Instagram</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+            <div class="footer-copyright">
+                <h1><span>© Alloa Boxing Club 2019</span><br> Designed & Developed by <a href="https://www.danielpriestley.dev"><span>Daniel
+                            Priestley</span></a></h1>
+
+                <a href="index" class="footer-logo"><img src="{% static 'img/white-gold-logo.svg' %}" alt="alloa club crest"></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/slideout.min.js' %}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script>
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+
+            'padding': 325,
+            'tolerance': 70
+        });
+
+        $(function () { // $(document).ready shorthand
+            $('.monster').fadeIn('slow');
+        });
+
+        $(document).ready(function () {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function () {
+
+                /* Check the location of each desired element */
+                $('.hideme').each(function (i) {
+
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 600);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+
+
+
+        slideout.disableTouch();
+    </script>
+
+</body>
+
+</html>

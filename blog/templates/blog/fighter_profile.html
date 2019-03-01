@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<!-- <img src="{{ profile.picture.url }}" /> -->
+
+<div class="fighter-container">
+    <div class="fighter-picture">
+        <img src="{{ profile.picture.url }}" alt="fighter profile photo">
+    </div>
+    <div class="info-container">
+
+
+        <div class="container">
+            <h1 class="fighter__forename">{{ profile.forename }}</h1>
+            <h1 class="fighter__surname">{{ profile.surname }}</h1>
+        </div>
+        <div class="fighter">
+            <div class="fighter-stats">
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">HOMETOWN</h1>
+                    <h1 class="fighter-stats__stat">{{ profile.hometown }}</h1>
+                </div>
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">AGE</h1>
+                    <h1 class="fighter-stats__stat">{{ profile.age }}</h1>
+                </div>
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">FIGHTS</h1>
+                    <h1 class="fighter-stats__stat">{{ profile.fights }}</h1>
+                </div>
+
+            </div>
+            <div class="fighter-titles">
+                <h1 class="fighter-stats__heading">TITLES</h1>
+                <ul>
+                    <li>{{ profile.first_title }}</li>
+                    <li>{{ profile.second_title }}</li>
+                    <li>{{ profile.third_title }}</li>
+                    <li>{{ profile.fourth_title }}</li>
+                    <li>{{ profile.fifth_title }}</li>
+                    <li>{{ profile.sixth_title }}</li>
+                    <li>{{ profile.seventh_title }}</li>
+                    <li>{{ profile.eighth_title }}</li>
+                    <li>{{ profile.ninth_title }}</li>
+                    <li>{{ profile.tenth_title }}</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

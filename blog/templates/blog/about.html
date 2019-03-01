@@ -1,0 +1,54 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h1 class="heading-1">About us</h1>
+<div class="about">
+    <h1 class="about-heading">
+        Establishment
+    </h1>
+    <p class="about-paragraph">
+        Alloa Boxing Club was established in 1992 by Gibby Turnbull in Alloa, Clackmannshire, Scotland. It has produced
+        a
+        number of Scottish District Champions over the years and continues to produce high quality fighters, trained by
+        certified coaches in our Bowmar Training Centre.
+    </p>
+
+    <h1 class="about-heading">
+        LEGACY
+
+    </h1>
+    <p class="about-paragraph">
+        The current head coach John Whyte and his enthusiastic team of coaches aim to expand the club and carry on the
+        legacy
+        left behind by Gibby and mirror his efforts of creating opportunities for the youth and community of Alloa.
+    </p>
+    <div class="about-tribute">
+
+        <h1 class="heading-1 tribute-header">REMEMBRANCE</h1>
+        <div class="tribute-container">
+            <div class="tribute-paragraph">
+                <p>
+                    The club would like to honour Gibby for all of the work he done in creating the club we have today.
+                    His
+                    legacy inspired
+                    a generation of Alloa's youth.
+                </p>
+                <p class="thanks">Thank you, Gibby.</p>
+            </div>
+
+
+            <div class="img-container">
+
+                <img src="{% static 'img/GibbyTurnbill.jpg' %}" alt="gibby">
+                <p class="caption">Gibby Turnbull</p>
+                <p class="caption"> 1952 - 2013</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+{% endblock %}

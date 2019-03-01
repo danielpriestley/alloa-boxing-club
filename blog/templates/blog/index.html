@@ -1,0 +1,131 @@
+{% extends 'blog/landing-template.html' %}
+
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-jumbo">
+                <h1 class="jumbo">
+                    The premier boxing experience.
+                </h1>
+            </div>
+            <div class="hero-button">
+                <a href="about.html" class="hero-button-link">about us</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="event monster">
+    <div class="event-content hideme">
+        <!-- For some reason padding here is causing the width to increase so I've added a container within event-content to solve this -->
+        <div class="event-content-container">
+            <div class="home-fighter">
+                <h1 class="fighter-name">Alfredo Morelos</h1>
+                <h2 class="club-name">Alloa Boxing Club</h2>
+                <div class="fight-location">
+                    <h3 class="date">Friday 19th February</h3>
+                    <h3 class="location">Springbank Community Centre</h3>
+                </div>
+            </div>
+            <div class="versus">
+                <h3>v</h3>
+            </div>
+            <div class="away-fighter">
+                <h1 class="fighter-name">Scott Brown</h1>
+                <h2 class="club-name">Sparta Gym</h2>
+                <div class="price">
+                    <h3>£5 Entry</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="news-preview monster">
+
+
+
+    <div class="news-container hideme">
+        <div class="news-title">
+            <h1>Latest News</h1>
+            <a href="news.html">View more</a>
+        </div>
+        {% for post in posts|slice:":1" %}
+        <a href="{% url 'post_detail' pk=post.pk %}" class="article-container">
+
+            <div class="article-big">
+
+
+                <div class="article-big-image">
+                    <img src="{{ post.picture.url }}" alt="article image" class="article-big-image__image">
+                </div>
+                <div class="article-big-content">
+                    <div class="article-big-title">
+                        <h1>{{ post.title }}</h1>
+                    </div>
+                    <div class="article-big-date">
+                        <h2>{{ post.published_date }}</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        {% for post in posts|slice:"1:2" %}
+        <a href="{% url 'post_detail' pk=post.pk %}" class="article-container">
+            <div class="article-small">
+
+                <div class="article-small-image">
+                    <img src="{{ post.picture.url }}" alt="yes" class="article-small-image__image">
+                </div>
+                <div class="article-small-content">
+                    <div class="article-small-title">
+                        <h1>{{ post.title }}</h1>
+                    </div>
+                    <div class="article-small-date">
+                        <h2>{{ post.published_date}}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        {% endfor %}
+        {% for post in posts|slice:"2:3" %}
+        <a href="{% url 'post_detail' pk=post.pk %}" class="article-container">
+            <div class="article-small">
+                <div class="article-small-image">
+                    <img src="{{ post.picture.url }}" alt="yes" class="article-small-image__image">
+                </div>
+                <div class="article-small-content">
+                    <div class="article-small-title">
+                        <h1>{{ post.title }}</h1>
+                    </div>
+                    <div class="article-small-date">
+                        <h2>{{ post.published_date}}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+<section class="sponsors monster">
+    <div class="sponsors-container hideme">
+        <div class="sponsors-title">
+            <h1>SPONSORED BY</h1>
+        </div>
+        <div class="sponsors-logos">
+            <div class="sponsors-logos-1">
+                <h1 class="sponsors-logos-example">LOGO</h1>
+            </div>
+            <div class="sponsors-logos-2">
+                <h1 class="sponsors-logos-example">LOGO</h1>
+            </div>
+            <div class="sponsors-logos-3">
+                <h1 class="sponsors-logos-example">LOGO</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
