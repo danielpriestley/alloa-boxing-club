@@ -84,7 +84,7 @@
                     <div class="iconfix"><img src="{% static 'img/twitter-logo-dark.svg' %}"></div>
                 </a>
                 <a href="https://www.instagram.com/alloaboxingclub" class="right-nav-link">
-                    <div class="iconfix"><img src="{% static 'img/instagram-logo-dark.svg' %}"></div>
+                    <div class="iconfix"><img src="{% static 'img/instagramdark.svg' %}"></div>
                 </a>
             </div>
         </nav>
@@ -152,6 +152,8 @@
             'tolerance': 70
         });
 
+        slideout.disableTouch();
+
         $(function () { // $(document).ready shorthand
             $('.monster').fadeIn('slow');
         });
@@ -181,12 +183,6 @@
             });
 
         });
-
-
-
-
-
-        slideout.disableTouch();
     </script>
 
 </body>
