@@ -11,7 +11,7 @@
                 </h1>
             </div>
             <div class="hero-button">
-                <a href="about.html" class="hero-button-link">about us</a>
+                <a href="about" class="hero-button-link">about us</a>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
     <div class="news-container hideme">
         <div class="news-title">
             <h1>Latest News</h1>
-            <a href="news.html">View more</a>
+            <a href="news">View more</a>
         </div>
         {% for post in posts|slice:":1" %}
         <a href="{% url 'post_detail' pk=post.pk %}" class="article-container">
