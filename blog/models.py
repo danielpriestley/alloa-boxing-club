@@ -26,7 +26,7 @@ class Post(models.Model):
 class Profile(models.Model):
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    picture = models.ImageField(default='blog/static/media/default.jpg')
+    picture = CloudinaryField('image')
     forename = models.CharField(max_length=50)
     surname = models.CharField(max_length=20, default="Boxer")
     age = models.IntegerField(default=16)
