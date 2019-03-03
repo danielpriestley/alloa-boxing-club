@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
@@ -9,7 +10,8 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, default="subtitle")
     text = models.TextField(default='Subtitle')
-    picture = models.ImageField(default='blog/static/media/default.jpg')
+    # picture = models.ImageField(default='blog/static/media/default.jpg')
+    picture = CloudinaryField('image')
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
