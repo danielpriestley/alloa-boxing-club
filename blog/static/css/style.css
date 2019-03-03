@@ -199,7 +199,7 @@ body {
   position: relative;
 }
 .right-nav-link:not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 .right-nav-link:hover:before {
   width: 2.5rem;
@@ -1814,7 +1814,7 @@ input[type=checkbox]:checked + .left-nav-link {
   padding: 3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  height: 42rem;
+  min-height: 42rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
