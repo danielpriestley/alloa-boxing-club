@@ -77,14 +77,17 @@
 
             <!-- Right Navigation Items -->
             <div class="right-nav">
-                <a href="https://www.facebook.com/alloaboxin.club" class="right-nav-link">
-                    <div class="iconfix"><img type="image/svg" content src="{% static 'img/facebook-logo-dark.svg' %}"></div>
-                </a>
-                <a href="https://www.twitter.com/alloaboxingclub" class="right-nav-link">
-                    <div class="iconfix"><img src="{% static 'img/twitter-logo-dark.svg' %}"></div>
+                <a href="https://www.facebook.com/alloaboxin.club" class="right-nav-link"><svg class="right-nav-icon right-nav-icon--dark">
+                        <use xlink:href="{% static 'img/sprite.svg#icon-facebook' %}"></use>
+                    </svg> </a>
+                <a href="https://www.twitter.com/alloaboxingclub" class="right-nav-link"><svg class="right-nav-icon right-nav-icon--dark">
+                        <use xlink:href="{% static 'img/sprite.svg#icon-twitter' %}"></use>
+                    </svg>
                 </a>
                 <a href="https://www.instagram.com/alloaboxingclub" class="right-nav-link">
-                    <div class="iconfix"><img src="{% static 'img/instagramdark.svg' %}"></div>
+                    <svg class="right-nav-icon right-nav-icon--dark">
+                        <use xlink:href="{% static 'img/sprite.svg#icon-instagram' %}"></use>
+                    </svg>
                 </a>
             </div>
         </nav>

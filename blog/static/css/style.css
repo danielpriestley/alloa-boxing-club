@@ -217,6 +217,16 @@ body {
   z-index: 50;
   background-color: var(--color-primary);
 }
+.right-nav-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.right-nav-icon--dark {
+  fill: var(--color-dark-grey-3);
+}
+.right-nav-icon--light {
+  fill: white;
+}
 
 input[type=checkbox] {
   transition: all 0.3s;
@@ -673,6 +683,7 @@ input[type=checkbox]:checked + .left-nav-link {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-rendering: optimizeLegibility;
 }
 #dark-nav .right-nav-link {
   position: relative;
