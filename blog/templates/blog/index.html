@@ -20,24 +20,31 @@
     <div class="event-content hideme">
         <!-- For some reason padding here is causing the width to increase so I've added a container within event-content to solve this -->
         <div class="event-content-container">
-            <div class="home-fighter">
-                <h1 class="fighter-name">Alfredo Morelos</h1>
-                <h2 class="club-name">Alloa Boxing Club</h2>
-                <div class="fight-location">
-                    <h3 class="date">Friday 19th February</h3>
-                    <h3 class="location">Springbank Community Centre</h3>
+            {% for event in events|slice:":1" %}
+            <div class="event-title-container">
+                <h1 class="event-title">{{event.eventTitle}}
+                </h1>
+                <h3 class="event-location">{{event.location}}</h3>
+            </div>
+            <div class="event-info">
+                <div class="home-fighter">
+                    <h1 class="fighter-name">{{ event.homeFighter }}</h1>
+                    <h2 class="club-name">Alloa Boxing Club</h2>
+                </div>
+                <!-- <div class="versus">
+                    <h3>v</h3>
+                </div> -->
+                <div class="away-fighter">
+                    <h1 class="fighter-name">Scott Brown</h1>
+                    <h2 class="club-name">Sparta Gym</h2>
+
+                </div>
+                <div class="event-footer">
+                    <h3>{{event.price}} Entry</h3>
+                    <h3>{{ event.eventDate }}</h3>
                 </div>
             </div>
-            <div class="versus">
-                <h3>v</h3>
-            </div>
-            <div class="away-fighter">
-                <h1 class="fighter-name">Scott Brown</h1>
-                <h2 class="club-name">Sparta Gym</h2>
-                <div class="price">
-                    <h3>£5 Entry</h3>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

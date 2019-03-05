@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Profile
+from .models import Post, Profile, Event
 from .forms import PostForm
 from django.shortcuts import redirect
 
@@ -50,7 +50,14 @@ def profile_detail(request, pk):
 def index(request):
     posts = Post.objects.filter(
         published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/index.html', {'posts': posts})
+    events = Event.objects.filter(
+        published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'blog/index.html', {'posts': posts, 'events': events})
+
+# def index(request):
+#     events = Event.objects.filter(
+#         published_date__lte=timezone.now()).order_by('-published_date')
+#     return render(request, 'blog/index.html', {'events': events})
 
 
 def post_list(request):
