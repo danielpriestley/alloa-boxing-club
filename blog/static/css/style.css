@@ -1853,7 +1853,7 @@ input[type=checkbox]:checked + .left-nav-link {
   padding: 3rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  min-height: 42rem;
+  min-height: 44rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
