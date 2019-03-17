@@ -2593,6 +2593,7 @@ input[type=checkbox]:checked + .left-nav-link {
   text-transform: uppercase;
   position: relative;
   margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 .gallery-image-caption--caption::after {
   position: absolute;
@@ -2607,7 +2608,7 @@ input[type=checkbox]:checked + .left-nav-link {
 .gallery-image-caption--credits {
   font-size: 1.3rem;
   color: var(--color-light-grey-2);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .gallery-image:hover .gallery-image-caption--caption::after {

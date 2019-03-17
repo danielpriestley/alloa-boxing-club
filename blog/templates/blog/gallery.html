@@ -10,7 +10,7 @@
 
 <div class="gallery">
     {% for galleryPhoto in galleryPhotos %}
-    <a href="#" class="gallery-image">
+    <a href="{{galleryPhoto.picture.url}}" class="gallery-image">
         <img src="{{galleryPhoto.picture.url}}" alt="#">
         <div class="gallery-image-caption">
             <h1 class="gallery-image-caption--caption">{{ galleryPhoto.caption }}</h1>
