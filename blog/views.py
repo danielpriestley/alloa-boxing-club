@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Profile, Event
+from .models import Post, Profile, Event, GalleryPhoto
 from .forms import PostForm
 from django.shortcuts import redirect
 
@@ -40,6 +40,12 @@ def fighters(request):
     profiles = Profile.objects.filter(
         published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/fighters.html', {'profiles': profiles})
+
+
+def gallery(request):
+    galleryPhotos = GalleryPhoto.objects.filter(
+        published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'blog/gallery.html', {'galleryPhotos': galleryPhotos})
 
 
 def profile_detail(request, pk):

@@ -17,6 +17,9 @@ urlpatterns = [
     path('sponsor', views.sponsor, name='sponsor'),
     path('news', views.news, name='news'),
     path('about', views.about, name='about'),
+    path('gallery', views.gallery, name='gallery'),
+
+
 
 
 

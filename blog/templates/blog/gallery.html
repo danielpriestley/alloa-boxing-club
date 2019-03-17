@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<h1 class="heading-1">
+    gallery
+</h1>
+
+<div class="gallery">
+    {% for galleryPhoto in galleryPhotos %}
+    <a href="#" class="gallery-image">
+        <img src="{{galleryPhoto.picture.url}}" alt="#">
+        <div class="gallery-image-caption">
+            <h1 class="gallery-image-caption--caption">{{ galleryPhoto.caption }}</h1>
+            <h2 class="gallery-image-caption--credits">{{galleryPhoto.credit}}</h2>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% for galleryPhoto in galleryPhotos %}
+<div class="gallery-image">
+    <h1 class="image-title">{{galleryPhoto.title}}</h1>
+</div>
+
+
+
+
+
+
+
+
+
+{% endfor %} -->
+
+
+
+
+
+{% endblock %}

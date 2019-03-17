@@ -22,7 +22,6 @@
 
 html {
   font-size: 62.5%;
-  font-family: proxima-nova, "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 @media only screen and (max-width: 37.5em) {
   html {
@@ -48,6 +47,7 @@ body {
   overflow-x: hidden;
   animation: 0.8s ease-in 0s 1 fadeIn forwards;
   background-color: var(--color-white);
+  font-family: proxima-nova, "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 }
 
 .blackBody {
@@ -2557,6 +2557,61 @@ input[type=checkbox]:checked + .left-nav-link {
 
 .cta-container {
   margin-right: 3rem;
+}
+
+.gallery {
+  height: 100%;
+  column-width: 300px;
+  column-gap: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+.gallery-image {
+  max-width: 24vw;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  border-radius: 5px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 81.25em) {
+  .gallery-image {
+    max-width: initial;
+    width: 100%;
+  }
+}
+.gallery-image img {
+  height: 100%;
+  width: 100%;
+}
+.gallery-image-caption {
+  padding: 1rem 2rem;
+  color: var(--color-dark-grey-3);
+}
+.gallery-image-caption--caption {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.gallery-image-caption--caption::after {
+  position: absolute;
+  content: "";
+  bottom: -0.5rem;
+  left: 0;
+  height: 0.3rem;
+  width: 10rem;
+  background-color: var(--color-primary);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+}
+.gallery-image-caption--credits {
+  font-size: 1.3rem;
+  color: var(--color-light-grey-2);
+  font-weight: 400;
+}
+
+.gallery-image:hover .gallery-image-caption--caption::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

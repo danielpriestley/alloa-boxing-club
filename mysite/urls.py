@@ -18,12 +18,13 @@ from django.urls import include, path
 from . import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
- 
- 
+from django.conf.urls import include, url
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()
