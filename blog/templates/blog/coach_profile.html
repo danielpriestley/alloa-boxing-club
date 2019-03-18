@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="fighter-container">
+    <div class="fighter-picture">
+        <img src="{{ coach.picture.url }}" alt="fighter profile photo">
+    </div>
+    <div class="info-container">
+
+
+        <div class="container">
+            <h1 class="fighter__forename">{{ coach.forename }}</h1>
+            <h1 class="fighter__surname">{{ coach.surname }}</h1>
+        </div>
+        <div class="fighter">
+            <div class="fighter-stats">
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">ROLE</h1>
+                    <h1 class="fighter-stats__stat">{{ coach.role }}</h1>
+                </div>
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">AGE</h1>
+                    <h1 class="fighter-stats__stat">{{ coach.age }}</h1>
+                </div>
+                <div class="fighter-stats__container">
+                    <h1 class="fighter-stats__heading">EXPERIENCE</h1>
+                    <h1 class="fighter-stats__stat">{{ coach.experience }} Years</h1>
+                </div>
+
+            </div>
+
+            <div class="fighter-titles">
+                <h1 class="fighter-stats__heading">BIO</h1>
+                <p class="fighter-stats__bio">{{ coach.bio }}</p>
+            </div>
+            <!-- <div class="fighter-titles">
+                <h1 class="fighter-stats__heading">BIO</h1>
+                <p class="fighter-stats__bio">{{ coach.bio }}</p>
+            </div> -->
+
+
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

@@ -9,7 +9,7 @@ class Post(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, default="subtitle")
-    text = models.TextField(default='Subtitle')
+    text = models.TextField(default="")
     # picture = models.ImageField(default='blog/static/media/default.jpg')
     picture = CloudinaryField('image')
     created_date = models.DateTimeField(default=timezone.now)
@@ -86,3 +86,23 @@ class GalleryPhoto(models.Model):
 
     def __str__(self):
         return self.caption
+
+
+class Coach(models.Model):
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    picture = CloudinaryField('image')
+    forename = models.CharField(max_length=100, default="", blank=True)
+    surname = models.CharField(max_length=100, default="", blank=True)
+    role = models.CharField(max_length=100, default="Coach", blank=True)
+    age = models.IntegerField(default=None)
+    experience = models.IntegerField(default=None)
+    bio = models.TextField(default="")
+    published_date = models.DateTimeField(blank=True, null=True)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.forename + " " + self.surname

@@ -2003,7 +2003,7 @@ input[type=checkbox]:checked + .left-nav-link {
 
 .profile-card {
   width: 30rem;
-  border: 1px solid var(--color-light-grey-1);
+  border: 1px solid transparent;
   border-radius: 10px;
   background-color: white;
   box-shadow: var(--shadow-light);
@@ -2079,6 +2079,9 @@ input[type=checkbox]:checked + .left-nav-link {
   text-transform: uppercase;
   text-align: right;
 }
+.profile-card__bio {
+  font-size: 1.8rem;
+}
 .profile-card__btn {
   font-size: 1.3rem;
   color: var(--color-dark-grey-3);
@@ -2134,11 +2137,19 @@ input[type=checkbox]:checked + .left-nav-link {
 
 .info-container {
   overflow: hidden;
+  width: 70%;
+}
+@media only screen and (max-width: 63.25em) {
+  .info-container {
+    width: 100%;
+  }
 }
 
 .fighter {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
 }
 .fighter__forename {
   font-size: 5rem;
@@ -2194,7 +2205,22 @@ input[type=checkbox]:checked + .left-nav-link {
 .fighter-stats__container {
   margin-bottom: 3rem;
 }
+.fighter-stats__bio {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  color: var(--color-dark-grey-1);
+}
 
+.fighter-titles {
+  align-self: flex-start;
+  width: 70%;
+}
+@media only screen and (max-width: 63.25em) {
+  .fighter-titles {
+    width: 100%;
+  }
+}
 .fighter-titles ul {
   list-style: none;
   margin-top: 1rem;
