@@ -97,7 +97,7 @@ class Coach(models.Model):
     role = models.CharField(max_length=100, default="Coach", blank=True)
     age = models.IntegerField(default=None)
     experience = models.IntegerField(default=None)
-    bio = models.TextField(default="")
+    # bio = models.TextField(default="")
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
