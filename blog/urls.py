@@ -19,7 +19,6 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('gallery', views.gallery, name='gallery'),
     path('coaches', views.coaches, name='coaches'),
-    path('coach/<int:pk>/', views.coach_profile, name='coach_profile'),
 
 
 
