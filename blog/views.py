@@ -42,15 +42,15 @@ def fighters(request):
     return render(request, 'blog/fighters.html', {'profiles': profiles})
 
 
-def coaches(request):
-    coaches = Coach.objects.filter(
-        published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/coaches.html', {'coaches': coaches})
+# def coaches(request):
+#     coaches = Coach.objects.filter(
+#         published_date__lte=timezone.now()).order_by('-published_date')
+#     return render(request, 'blog/coaches.html', {'coaches': coaches})
 
 
-def coach_profile(request, pk):
-    coach = get_object_or_404(Coach, pk=pk)
-    return render(request, 'blog/coach_profile.html', {'coach': coach})
+# def coach_profile(request, pk):
+#     coach = get_object_or_404(Coach, pk=pk)
+#     return render(request, 'blog/coach_profile.html', {'coach': coach})
 
 
 def gallery(request):

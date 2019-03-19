@@ -88,17 +88,17 @@ class GalleryPhoto(models.Model):
         return self.caption
 
 
-class Coach(models.Model):
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    picture = CloudinaryField('image')
-    forename = models.CharField(max_length=100, default="", blank=True)
-    surname = models.CharField(max_length=100, default="", blank=True)
-    role = models.CharField(max_length=100, default="Coach", blank=True)
-    age = models.IntegerField(default=None)
-    experience = models.IntegerField(default=None)
-    # bio = models.TextField(default="")
-    published_date = models.DateTimeField(blank=True, null=True)
+# class Coach(models.Model):
+#     author = models.ForeignKey(
+#         settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+#     picture = CloudinaryField('image')
+#     forename = models.CharField(max_length=100, default="", blank=True)
+#     surname = models.CharField(max_length=100, default="", blank=True)
+#     role = models.CharField(max_length=100, default="Coach", blank=True)
+#     age = models.IntegerField(default=None)
+#     experience = models.IntegerField(default=None)
+#     # bio = models.TextField(default="")
+#     published_date = models.DateTimeField(blank=True, null=True)
 
 
 class Staff(models.Model):
