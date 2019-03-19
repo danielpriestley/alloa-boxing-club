@@ -42,6 +42,10 @@ def fighters(request):
     return render(request, 'blog/fighters.html', {'profiles': profiles})
 
 
+def coaches(request):
+    return render(request, 'blog/coaches.html')
+
+
 def gallery(request):
     galleryPhotos = GalleryPhoto.objects.filter(
         published_date__lte=timezone.now()).order_by('-published_date')
