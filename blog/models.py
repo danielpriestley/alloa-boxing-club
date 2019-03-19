@@ -100,6 +100,25 @@ class Coach(models.Model):
     # bio = models.TextField(default="")
     published_date = models.DateTimeField(blank=True, null=True)
 
+
+class Staff(models.Model):
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    picture = CloudinaryField('image')
+    forename = models.CharField(max_length=50)
+    surname = models.CharField(max_length=20, default="Boxer", blank=True)
+    age = models.IntegerField(default=16)
+    experience = models.IntegerField(default=1)
+    bio = models.TextField(default="")
+    published_date = models.DateTimeField(blank=True, null=True)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.forename + " " + self.surname
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
