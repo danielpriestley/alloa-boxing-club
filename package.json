@@ -11,9 +11,11 @@
   "author": "Daniel Priestley",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.5.0",
     "eslint": "^5.13.0",
     "live-server": "^1.2.1",
     "micromodal": "^0.3.2",
+    "postcss-cli": "^6.1.2",
     "sass": "^1.17.0",
     "slideout": "^1.0.1"
   }
