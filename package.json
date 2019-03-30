@@ -6,7 +6,8 @@
   "scripts": {
     "sasswatch": "sass --watch sass/main.scss:blog/static/css/style.css",
     "devserver": "live-server --browser='Google Chrome'",
-    "start": "npm run sasswatch | npm run devserver"
+    "start": "npm run sasswatch | npm run devserver",
+    "buildcss": " npx postcss blog/static/css/style.css --use autoprefixer -d blog/static/css/"
   },
   "author": "Daniel Priestley",
   "license": "ISC",
