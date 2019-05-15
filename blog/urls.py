@@ -1,10 +1,18 @@
 from django.urls import path
 from django.conf.urls import url
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import PostSitemap
 from . import views
+
+sitemaps = {
+    'posts': PostSitemap
+}
 
 
 urlpatterns = [
     # path('', views.post_list, name='post_list'),
+    url(r'^sitemap\.xml/$', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+
     path('', views.index, name='index'),
     path('index', views.index, name='index'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
