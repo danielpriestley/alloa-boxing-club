@@ -22,7 +22,7 @@ class Post(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return "/posts/%s/" % (self.title)
+        return "/posts/%s/" % (self.id)
 
     def __str__(self):
         return self.title
