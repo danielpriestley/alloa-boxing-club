@@ -22,7 +22,7 @@ class Post(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse('post_details', kwargs={'name': self.name})
+        return reverse('post_details', kwargs={'name': self.title})
 
     def __str__(self):
         return self.title
