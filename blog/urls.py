@@ -1,6 +1,7 @@
 from django.urls import path
 from django.conf.urls import url
 from django.contrib.sitemaps.views import sitemap
+from django.views.generic import TemplateView
 from .sitemaps import PostSitemap
 from . import views
 
@@ -33,4 +34,9 @@ urlpatterns = [
 
 
 
+]
+
+urlpatterns += [
+    url(r'^robots\.txt$', TemplateView.as_view(
+        template_name="blog/robots.txt", content_type='text/plain')),
 ]
